@@ -6,6 +6,7 @@ export default function Nav() {
       <nav>
         <ul className="nav">
           <li className="navItem"><Link to='/'>Home</Link></li>
+          <li className="navItem"><Link to='/fmf'>FMF</Link></li>
         </ul>
       </nav>
   )

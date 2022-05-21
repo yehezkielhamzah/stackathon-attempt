@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
 
 
 app.use('/api', require('../api'))
+app.use('/fmf', require('./fmf'))
 
 module.exports = app;
 

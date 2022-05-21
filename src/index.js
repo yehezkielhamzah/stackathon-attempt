@@ -1,18 +1,20 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
 import Nav from './nav'
 import Home from './home'
+import Fmf from './fmf'
 
 class App extends React.Component {
     render() {
         return(
-            <Router>
+            <BrowserRouter>
                 <Nav/>
                 <Routes>
-                    <Route exact path='/' element={<Home/>}/>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/fmf' element={<Fmf/>}/>
                 </Routes>
-            </Router>
+            </BrowserRouter>
 
         )
     }
