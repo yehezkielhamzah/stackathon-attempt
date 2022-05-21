@@ -1,16 +1,14 @@
 const Deal = require('../db/models/deal');
 const express = require('express')
 const router = express.Router();
-const scrape = require('../puppeteer')
+const scrape = require('../cards')
 module.exports = router;
-
-//router.use('/api', require('./deals'))
 
 router.get('/', async (req, res, next) => {
     try {
         res.send(await Deal.findAll({
             where: {
-                origin: 'fmf'
+                origin: 'doctor of credit'
             }
         }))
     }
@@ -22,10 +20,10 @@ router.get('/', async (req, res, next) => {
 
 router.get('/add', async (req, res, next) => {
     try {
-        const sales = await scrape.scrape("https://old.reddit.com/r/frugalmalefashion/rising/")
+        const sales = await scrape.scrape("https://www.doctorofcredit.com/best-current-credit-card-sign-bonuses/")
 
         for (let i = 0; i < sales.length; i++) {
-            await Deal.create({title: sales[i], description: 'use code STACKATHON', origin: 'fmf'})
+            await Deal.create({title: sales[i], description: 'default', origin: 'doctor of credit'})
         }
         res.send('succeeded')
     }

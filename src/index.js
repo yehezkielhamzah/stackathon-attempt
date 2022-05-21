@@ -4,6 +4,7 @@ import { HashRouter as Router, Routes, Route, BrowserRouter, HashRouter } from '
 import Nav from './nav'
 import Home from './home'
 import Fmf from './fmf'
+import Card from './card'
 
 class App extends React.Component {
     render() {
@@ -13,6 +14,7 @@ class App extends React.Component {
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/fmf' element={<Fmf/>}/>
+                    <Route path='/card' element={<Card/>}/>
                 </Routes>
             </HashRouter>
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import axios from 'axios'
 //const scrape = require('../puppeteer')
-import FmfSales from './fmfSales'
+import Cards from './cards'
 
-class Fmf extends React.Component {
+class Card extends React.Component {
   state = {
     deals: [],
   }
@@ -11,11 +11,11 @@ class Fmf extends React.Component {
   render() {
     return (
       <div>
-        <h1>Stack-a-Ton of Clothing</h1>
-        <FmfSales></FmfSales>
+        <h1>Stack-a-Ton of Credit Cards</h1>
+        <Cards></Cards>
       </div>
     )
   }
 }
 
-export default Fmf
+export default Card
