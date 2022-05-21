@@ -1,0 +1,17 @@
+* {
+    font-family: "HelveticaNeue-Light";
+  }
+
+nav {
+  font: Arial;
+}
+
+.navItem {
+  flex: 1 0 30%;
+  text-align: center;
+  list-style: none;
+}
+
+.nav {
+  display: flex;
+}

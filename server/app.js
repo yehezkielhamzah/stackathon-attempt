@@ -7,6 +7,7 @@ const Deal = require('../db/models/deal')
 // static middleware
 app.use('/dist', express.static(path.join(__dirname, '../dist')))
 
+app.use(express.static('public'));
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html'))

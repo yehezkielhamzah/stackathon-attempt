@@ -11,7 +11,7 @@ class Fmf extends React.Component {
   render() {
     return (
       <div>
-        <h1>Frugal Male Fashion Deals</h1>
+        <h1>Stack-a-Ton of Fashion Deals</h1>
         <FmfSales></FmfSales>
       </div>
     )

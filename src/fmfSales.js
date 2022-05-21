@@ -6,16 +6,18 @@ class FmfSales extends React.Component {
     deals: [],
   }
 
-  // async componentDidMount() {
-  //   const response = await scrape.scrape("https://old.reddit.com/r/frugalmalefashion/rising/")
-  //   //res.send(await scrape.scrape("https://old.reddit.com/r/frugalmalefashion/rising/"))
-  //   console.log('--response--',response)
-  // }
+  async componentDidMount() {
+    const data = (await axios.get('/api/deals')).data
+    this.setState({deals: data })
+  }
 
   render() {
     return (
       <div>
         <h1>FMF Sales</h1>
+        <ul>
+          {this.state.deals.map((deal) => <li key={deal.id}>{deal.title}</li>)}
+        </ul>
       </div>
     )
   }
